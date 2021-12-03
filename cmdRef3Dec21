@@ -1,0 +1,30 @@
+# py39Learn
+Python 3,9 with MySQL 8.0.27 data science learning 
+reposatory for my Python data sciance sessions (private but shared content )
+
+then press "Windows key + R" write "services.msc", run as admin
+
+start MySQL80 service.
+
+"to go to mysql prompt"
+mysql -h localhost 
+
+CREATE USER 'ODBC'@'localhost'
+  IDENTIFIED BY '';
+GRANT ALL
+  ON *.*
+  TO 'ODBC'@'localhost'
+  WITH GRANT OPTION;
+
+
+>>> print(get_python_lib())           # Python v3.x
+/Library/Frameworks/Python.framework/Versions/3.1/lib/python3.1/site-packages
+
+
+CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
+       species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+
+INSERT INTO pet
+       VALUES ('Puffball','Dev','hamster','f','2021-2-12',NULL);
+
+LOAD DATA LOCAL INFILE '/path/pet.txt' INTO TABLE pet;
